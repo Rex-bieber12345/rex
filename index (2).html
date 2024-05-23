@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="c:\Users\User\Desktop\favicon_io\favicon.ico" type="image/x-icon">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Thi website is movies VidRex and it is for movies.This is the only platform that allows special request.">
+    <meta name="author" content="Rexbieber">
+
+
+
+    <title>VidRex platform</title>
+    <style>
+        body {
+            font-family: 'Edwardian script ITC' Tisa;
+            margin: 0;
+            padding: 0;
+            background-color: #e4f9f4f5;
+        }
+
+        header {
+            background-color: whitesmoke;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            color: #ff0000;
+            /* YouTube red color */
+        }
+
+        h2 {
+            margin: 0;
+            color: #66bfbf;
+            /*Whatsapp blue color*/
+        }
+
+        .search-bar {
+            margin: 20px;
+            padding: 10px;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: #ff0000;
+            /* YouTube red color */
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .video-card {
+            position: relative;
+            width: 400px;
+            margin: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-card video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .play-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .video-card:hover .play-button {
+            display: block;
+        }
+
+        .video-card h2 {
+            padding: 10px;
+            padding-bottom: 5px;
+            margin: 0;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .btn {
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            text-shadow: 0px 1px 3px #666666;
+            font-family: Georgia;
+            color: #12ffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #3cb0fd;
+            text-decoration: none;
+        }
+
+
+        .download-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .download-link:hover {
+            background-color: #1a73e8;
+        }
+
+        .pray {
+            color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="YouTube">VidRex</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search videos..." inputmode="kana" aria-invalid="false" input type="">
+            <button onclick="searchVideos()">Search</button>
+        </div>
+        <h1 class="pray">TO PLAY CLICK ONCE. TO PAUSE CLICK TWICE</h1>
+    </header>
+
+    <div class="video-grid">
+
+        <!-- Video 1 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder\Watch The Big Trip (2019).mp4" type="video/mp4">
+                <track kind="subtitles" src="captions1.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>The big Trip</h2>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+            <video controls>
+                <source src="d:\movie\Small.foot.2018.480p.b.lu.ry.Film2Movie_WS.mkv" type="video/mp4">
+                <track kind="subtitles" src="captions2.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Small Foot</h2>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card">
+            <video controls>
+                <source src="d:\movie\Black Adam (2022) (NetNaija.com).mkv" type="video/mp4">
+                <track kind="subtitles" src="captions3.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Black Adams</h2>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-card">
+            <video controls>
+                <source src="d:\movie\Ready Player One 2018 V3 720p HC HDRip 999 MB - iExTV.mp4" type="video/mp4">
+                <track kind="subtitles" src="captions4.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Ready Player One</h2>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\New folder (2)\Spider-Man.Across.The.Spider-Verse.2023.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions5.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            </button>
+            <h2>Spider-Man Across the Spider-Verse</h2>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\New folder (2)\Minions.The.Rise.of.Gru.2022.720p.AMZN.WEB-DL.GalaxyRG.Zardfilm-Subbed.mkv"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions6.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Minions. The rise of Gru</h2>
+        </div>
+
+
+        <!-- Video 7 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder (2)\Watch Kingsman- The Golden Circle (2017).mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions7.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="">
+            </button>
+            <h2>Kingsman-Golden circle</h2>
+        </div>
+
+        <!-- Video 8 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder (2)\Watch Kingsman- The Secret Service (2014).mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions8.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Kingsman-Seceret service</h2>
+        </div>
+
+        <!-- Video 9 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder (2)\The.Beekeeper.(2024).mkv" type="video/mp4">
+                <track kind="subtitles" src="captions9.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Bee keeper</h2>
+        </div>
+
+        <!-- Video 10 -->
+        <div class="video-card" width="320" hight="230">
+            <video controls>
+                <source src="c:\Users\User\Desktop\movie today\The Red Sneakers (2002).mp4" type="video/mp4">
+                <track kind="subtitles" src="captions10.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>The Red Sneakers</h2>
+        </div>
+
+        <!-- Video 11 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch  Season 1 Episode 1 - Pups Make a Splash_Pups Fall Festival.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions7.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 12 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 2 - Pups Save the Sea Turtles_Pups and the Very Big Baby.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions12.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 13 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 3 - Pups and the Kitty-tastrophe_Pups Save the Train.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions13.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 14 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 4 - Pup Pup Boogie_Pups in a Fog.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions14.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 15 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 5 - Pup, Pup, Goose_Pup, Pup and Away.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions15.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 16 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 6 - Pups and the Snow Monster_Pups on Ice.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions16.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 17 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 7 - Pups Save the Circus_Pup a Doodle Do.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions17.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+
+        <!-- Video 18 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 8 - Pups Pit Crew_Pups Fight Fire.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions18.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 19 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 9 - Pups Get a Rubble_Pups Save a Walrus.mp4"
+                    type="video/mp4">
+                <track kind="subtitles captions" src="captions19.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 20 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 10 - Pups Save the Bay_Pups Save a Goodway.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions20.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+
+        <!-- Video 21 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 11 - Pups Save Christmas.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions21.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 22 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 12 - Pups and the Ghost Pirate.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions22.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 23 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 13 - Pups Save the Bunnies_Puptacular.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions23.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 24 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 14 - Pups Save the Treats_Pups Get a Lift.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions24.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 25 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 15 - Pups Save a Hoedown_Pups Save Alex.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions25.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 26 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 16 - Pups Save a School Day_Pups Turn on the Lights.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions26.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 27 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 17 - Pups Save a Pool Day_Circus Pup Formers.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions27.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 28 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 18 - Pups Save a Super Pup_Pups Save Ryder's Robot.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions28.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 29 -->
+        <div class="video-card">
+            <video controls>
+                <source
+                    src="c:\Users\User\Desktop\PAW PATROL S1\Watch PAW Patrol Season 1 Episode 19 - Pups Go All Monkey_Pups Save a Hoot.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions29.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="play">
+            </button>
+            <h2>Paw Patrol</h2>
+        </div>
+
+        <!-- Video 30 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder (2)\VID_20240209_195957_617.mp4.mkv" type="video/mp4">
+                <track kind="subtitles" src="captions4.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Monster High 2</h2>
+        </div>
+
+
+        <!-- Video 31 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder (2)\Wish.(2023).mkv" type="video/mp4">
+                <track kind="subtitles" src="captions4.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Wish</h2>
+        </div>
+
+        <!-- Video 32 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Desktop\New folder (2)\Watch Apocalypto (2006).mp4" type="video/mp4">
+                <track kind="subtitles" src="captions4.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Apocalypto</h2>
+        </div>
+
+
+        <!-- Video 33 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Downloads\Cars.2006.1080p.BluRay.x264.AAC-ETRG.mp4" type="video/mp4">
+                <track kind="subtitles" src="captions33.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Cars</h2>
+        </div>
+
+
+        <!-- Video 34 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Downloads\Moana.2016.720p.BluRay.x264-[YTS.AG].mp4" type="video/mp4">
+                <track kind="subtitles" src="captions33.vtt" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Moana</h2>
+        </div>
+
+
+        <!-- Video 35 -->
+        <div class="video-card">
+            <video controls>
+                <source src="c:\Users\User\Downloads\Penguins.of.Madagascar.2014.1080p.BluRay.x264.YIFY.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions35.vtt" srclang="en" label="English, Twi, French, Japanise">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Penguins of madagascar</h2>
+        </div>
+
+        <!-- Video 36 -->
+        <div class="video-card" aria-autocomplete="both">
+            <video controls>
+                <source src="c:\Users\User\Downloads\Trolls.World.Tour.2020.1080p.WEBRip.x264-RARBG.mp4"
+                    type="video/mp4">
+                <track kind="subtitles" src="captions36.vtt" srclang="en" label="English, Twi, French, Japanise">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="togglePlayPause(this)">
+                <img src="play-button.png" alt="Play">
+            </button>
+            <h2>Trolls World Tour</h2>
+        </div>
+
+
+        <!-- Add more videos as needed -->
+
+
+        <script>
+            function playVideo(button) {
+                var video = button.parentElement.querySelector('video');
+                video.play();
+            }
+
+
+            function searchVideos() {
+                var searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+                var videoCards = document.querySelectorAll('.video-card');
+
+                videoCards.forEach(function (card) {
+                    var title = card.querySelector('h2').textContent.toLowerCase();
+                    var video = card.querySelector('video');
+
+                    if (title.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                        video.pause(); // Pause hidden videos
+                    }
+                });
+            }
+
+            function togglePlayPause(button) {
+                var video = button.parentElement.querySelector('video');
+                if (video.paused || video.ended) {
+                    video.play();
+                    button.innerHTML = '<img src="pause-button.png" alt="Pause">';
+                } else {
+                    video.pause();
+                    button.innerHTML = '<img src="play-button.png" alt="Play">';
+                }
+            }
+
+            userInput.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    handleUserInput();
+                }
+            });
+
+        </script>
+
+</body>
+
+</html>

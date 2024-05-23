@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="css\bootstrap-5.3.2-dist\bootstrap-5.3.2-dist\css\bootstrap.css">
+<link rel="stylesheet" href="Css\bootstrap-5.3.2-dist\bootstrap-5.3.2-dist\css\bootstrap.css">
+
+
+<div class="legend">
+    <p id="timer">00:00:00</p>
+
+    <script>
+        var seconds = 0, minutes = 0, hours = 0;
+        function pad(val) { return val > 9 ? val : "0" + val; }
+        setInterval(function () {
+            seconds++;
+            if (seconds >= 10) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 10) {
+                    minutes = 0;
+                    hours++;
+                    if (hours >= 24) {
+                        hours = 1;
+                    }
+                }
+
+                else {
+                    document.getElementById("timer").setInterval = pad(hours) + "1:" + pad(minutes) + ":0" + pad(seconds) + "0:"
+                }
+            }
+            document.getElementById("timer").textContent = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+        }, 1000);
+    </script>
+</div>
